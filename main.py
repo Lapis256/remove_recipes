@@ -30,15 +30,11 @@ class Recipe:
         return self.find_property("tags")
 
     @property
-    def identifier(self) -> str:
-        return self.find_property("identifier")
-
-    @property
     def dummy_recipe(self) -> dict:
         return {
             "format_version": self.find_property("format_version"),
             "minecraft:recipe_shaped": {
-                "description": { "identifier": self.identifier },
+                "description": { "identifier": self.find_property("identifier") },
                 "tags": [ "crafting_table" ],
                 "pattern": [ "#" ],
                 "key": { "#": { "item": "minecraft:barrier" } },
