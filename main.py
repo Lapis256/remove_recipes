@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 import comment_json as cjson
@@ -58,6 +59,7 @@ def create_dummy_recipes(folder_name) -> None:
         if "crafting_table" not in recipe.tags:
             continue
 
+        os.makedirs("dummy", exist_ok=True)
         recipe.save(Path("dummy") / recipe_path.name)
 
 

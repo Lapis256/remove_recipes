@@ -1,5 +1,4 @@
 __pycache__/
+dummy/
 recipes/*
-dummy/*
 !/recipes/.gitkeep
-!/dummy/.gitkeep
